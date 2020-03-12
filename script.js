@@ -21,7 +21,6 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vSe5xHUQ-Xk6QFPVWahyVWToi
       if (resp.editor === 'ok') return true
     })
     resps.forEach(resp => {
-      document.getElementById('corona_qa_resp').innerHTML += `<div class="corona_resp"><p><b>Ptá se ${fillName(resp['Jméno'])}, ${niceTime(resp.Timestamp)}:</b> ${resp['Otázka']}</p><p><b>Odpověď: </b>${fillAnswr(resp.odpoved)}</p></div>`
-      console.log(resp)
+      document.getElementById('corona_qa_resp').innerHTML += `<div class="corona_resp"><p><b>Ptá se ${fillName(resp['Jméno'])}, ${niceTime(resp.Timestamp)}:</b> ${resp['Otázka']}</p><p><b>Odpověď: </b>${fillAnswr(resp.odpoved)}</p></div><hr>`
     })
   })
